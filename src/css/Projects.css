@@ -1,0 +1,197 @@
+/* Section Background & Glows */
+.projects-section {
+  background: 
+    /* Right Side Center Glow (Top se 50% niche) */
+    radial-gradient(circle at 100% 50%, #1a0b2e 0%, transparent 40%),
+    /* Bottom Left Glow */
+    radial-gradient(circle at 0% 0%, #120624 0%, transparent 40%);
+  
+  background-color: #05000a; /* Pure black base jo uper top right mein nazar ayega */
+  padding: 100px 5%;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.projects-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.projects-header h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.projects-header h2 span {
+  color: #FFBF00;
+}
+
+.projects-header p {
+  color: #a1a1aa;
+  margin-top: 15px;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Filter Styling */
+.filter-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn.active {
+  background: #c084fc;
+  color: #000;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+.explore-btn {
+  background: #FFBF00;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* --- THE FRAME DESIGN (AS PER IMAGE) --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.project-frame-card {
+  /* Frame Background Color #380ba1 */
+  background-color: #231436; 
+  border-radius: 12px;
+  overflow: hidden;
+  /* Frame spacing: Top, Left, Right are thick */
+  padding: 12px 12px 0 12px; 
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.project-frame-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(56, 11, 161, 0.3);
+}
+
+/* Inner Image Container */
+.project-inner-frame {
+  background: #000;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
+}
+
+.img-holder img {
+  width: 100%;
+  display: block;
+  /* Hover effect on image */
+  transition: transform 0.5s ease;
+}
+
+.project-frame-card:hover .img-holder img {
+  transform: scale(1.03);
+}
+
+/* Details Section (The Black Area below Frame) */
+.project-details-area {
+  background-color: #180a2b; /* Black Background for text */
+  margin: 0 -12px; /* To cover the frame padding width */
+  padding: 20px 15px;
+  flex-grow: 1;
+  /* Line separating image frame from text area */
+  border-top: 1px solid #380ba1; 
+}
+
+/* Yellow Tags */
+.tag-container {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.yellow-tag {
+  background: #FFBF00;
+  color: #000;
+  font-size: 11px;
+  font-weight: 900;
+  padding: 5px 12px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Title and Description Text */
+.project-text-content {
+  font-size: 15px;
+  color: #a1a1aa;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.project-name {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* Show More Button */
+.show-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+.show-more-btn {
+  background: transparent;
+  color: #FFBF00;
+  border: 1.5px solid #FFBF00;
+  padding: 12px 45px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.show-more-btn:hover {
+  background: #FFBF00;
+  color: #000;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .filter-bar { flex-direction: column; gap: 20px; }
+}
+
+
+
+.project-frame-card {
+  transition: all 0.3s ease-in-out;
+}
+
+.project-frame-card:hover {
+  transform: translateY(-5px);
+  filter: brightness(1.1);
+}

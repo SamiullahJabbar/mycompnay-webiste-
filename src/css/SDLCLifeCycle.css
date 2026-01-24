@@ -1,0 +1,122 @@
+.sdlc-section {
+  background-color: #05000a;
+ 
+  padding: 80px 20px 150px;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Header */
+.sdlc-header h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.sdlc-header .blue-text {
+  color: #FFBF00;
+}
+
+.header-line {
+  width: 450px;
+  height: 2px;
+  background: linear-gradient(90deg,  #180429,#FFBF00);
+  margin: 15px auto 35px;
+}
+
+.sdlc-header p {
+  max-width: 900px;
+  margin: 0 auto 120px;
+  color: #b0b0b0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Timeline Arrow Bar */
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow-main-bar {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  height: 190px; /* Reference image jaisi height */
+  background-color: #0d0017;
+  clip-path: polygon(0% 0%, 96% 0%, 100% 50%, 96% 100%, 0% 100%, 4% 50%);
+  display: flex;
+  align-items: center; /* Center alignment for items */
+}
+
+.steps-flex-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 0 40px;
+  position: relative;
+}
+
+.step-node-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 130px;
+  position: relative;
+}
+
+/* Icon Circle Style */
+.icon-circle-box {
+  width: 70px;
+  height: 70px;
+  background-color: #FFBF00;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.icon-circle-box img {
+  width: 38px;
+  height: 38px;
+  object-fit: contain;
+}
+
+/* Text Box Style */
+.text-label-box {
+  position: absolute;
+  width: 140px;
+  text-align: center;
+}
+
+.text-label-box span {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* --- ZigZag Logic from Reference --- */
+
+/* 1. Odd Items (1, 3, 5, 7): Icon in center, Text below bar */
+.step-node-item.odd .icon-circle-box {
+  /* Automatically centered by flex */
+}
+
+.step-node-item.odd .text-label-box {
+  top: 90px; /* Pushes text below the arrow bar */
+}
+
+/* 2. Even Items (2, 4, 6): Icon on top edge, Text in center of bar */
+.step-node-item.even {
+  /* Move icon up so it sits half on the edge */
+  transform: translateY(-55px); 
+}
+
+.step-node-item.even .text-label-box {
+  /* Push text back down so it stays in the center of the bar */
+  top: 95px; 
+}

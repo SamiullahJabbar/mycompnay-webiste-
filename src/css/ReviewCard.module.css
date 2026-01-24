@@ -1,0 +1,107 @@
+.sliderContainer {
+  padding: 80px 20px;
+  background-color: #05000a; /* Main section background */
+}
+
+.card {
+  /* Top purple to bottom black gradient */
+  background: linear-gradient(to bottom, #2d0a52 0%, #050505 70%);
+  border-radius: 12px;
+  padding: 35px;
+  position: relative;
+  border: 1px solid #3a1a5e;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  z-index: 2;
+}
+
+.profileImg {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  border: 2px solid #6d28d9;
+  object-fit: cover;
+}
+
+.info h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+
+}
+
+.info p {
+  margin: 2;
+  font-size: 0.85rem;
+  color: #b1a1c6;
+  opacity: 0.8;
+
+}
+
+.quoteIcon {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  width: 60px;
+  opacity: 0.15; /* Subdued large quote marks */
+}
+
+.feedback {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #e0e0e0;
+  margin-top: 25px;
+  flex-grow: 1;
+  z-index: 2;
+}
+
+.footerIcons {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  padding-top: 15px;
+}
+
+.footerIcons svg {
+  color: #ffffff;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footerIcons svg:hover {
+  opacity: 1;
+}
+
+
+.footerIcons a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.footerIcons a:hover {
+  transform: translateY(-3px); /* Hover effect */
+}
+
+.footerIcons svg {
+  color: #ffffff;
+  opacity: 0.6;
+}
+
+.footerIcons a:hover svg {
+  opacity: 1;
+}
