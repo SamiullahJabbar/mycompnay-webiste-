@@ -40,7 +40,7 @@ const Contact = () => {
               <div className={styles.infoItems}>
                 <div className={styles.infoBox}>
                   <h4>Email Us</h4>
-                  <p>contact@gbgcompany.com</p>
+                  <p>info@globalbizagentic.com</p>
                    <h4>Phone</h4>
                   <p>+444243243254</p>
                 </div>
