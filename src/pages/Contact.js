@@ -36,7 +36,7 @@ const Contact = () => {
             {/* Left Side: Info */}
             <div className={styles.contactInfo}>
               <h1>Let's Start Your <span>Project</span></h1>
-              <p>We help businesses scale with high-end WordPress solutions and custom digital strategies.</p>
+              <p>We help businesses scale with high-end solutions and custom digital strategies.</p>
               <div className={styles.infoItems}>
                 <div className={styles.infoBox}>
                   <h4>Email Us</h4>

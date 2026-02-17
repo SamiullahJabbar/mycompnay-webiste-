@@ -13,8 +13,16 @@
   z-index: 1000;
 }
 
-.navbar-logo { height: 60px; cursor: pointer; }
-.navbar-logo-img { height: 200%; width: auto; object-fit: contain; }
+.navbar-logo {
+  height: 60px;
+  cursor: pointer;
+}
+
+.navbar-logo-img {
+  height: 200%;
+  width: auto;
+  object-fit: contain;
+}
 
 .navbar-links {
   display: flex;
@@ -28,12 +36,33 @@
   border: 1px solid rgba(255, 204, 0, 0.3);
 }
 
-.nav-link { color: #fff; padding: 10px 15px; cursor: pointer; display: block; }
-.divider { color: rgba(255, 255, 255, 0.2); }
-.btn-talk { background-color: #FFBF00; padding: 12px 25px; border-radius: 50px; font-weight: 800; cursor: pointer; border: none; }
+.nav-link {
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  display: block;
+}
 
-.mobile-only { display: none; }
-.desktop-only { display: block; }
+.divider {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-talk {
+  background-color: #FFBF00;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+}
+
+.mobile-only {
+  display: none;
+}
+
+.desktop-only {
+  display: block;
+}
 
 /* --- Hamburger Menu Icon --- */
 .hamburger {
@@ -53,16 +82,30 @@
 
 /* --- RESPONSIVE FIX --- */
 @media (max-width: 1024px) {
-  .hamburger { display: flex; }
-  
-  .desktop-only { display: none; }
-  .mobile-only { display: block; margin-top: 20px; }
-  .divider { display: none; } /* Mobile pe danda hide */
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .mobile-only {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  /* Mobile pe danda hide */
 
   .navbar-links {
     position: fixed;
     top: 0;
-    right: -100%; /* Shuru mein screen se bahar */
+    right: -100%;
+    /* Shuru mein screen se bahar */
     flex-direction: column;
     justify-content: center;
     background: rgba(0, 0, 0, 0.95);
@@ -75,7 +118,8 @@
   }
 
   .navbar-links.show {
-    right: 0; /* Click pe andar aa jaye */
+    right: 0;
+    /* Click pe andar aa jaye */
   }
 
   .nav-item {
@@ -89,7 +133,84 @@
   }
 
   /* Hamburger Animation (X banna) */
-  .hamburger.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
-  .hamburger.active .bar:nth-child(2) { opacity: 0; }
-  .hamburger.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
+  .hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .navbar-container {
+    padding: 10px 20px;
+    width: 92%;
+  }
+
+  .navbar-logo {
+    height: 50px;
+  }
+
+  .navbar-logo-img {
+    height: 180%;
+  }
+
+  .navbar-links {
+    width: 85%;
+  }
+
+  .nav-link {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  .btn-talk {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .navbar-container {
+    padding: 8px 15px;
+    width: 90%;
+  }
+
+  .navbar-logo {
+    height: 45px;
+  }
+
+  .navbar-logo-img {
+    height: 160%;
+  }
+
+  .navbar-links {
+    width: 90%;
+  }
+
+  .nav-link {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .btn-talk {
+    padding: 9px 18px;
+    font-size: 0.85rem;
+  }
+
+  .hamburger {
+    gap: 4px;
+  }
+
+  .bar {
+    width: 22px;
+    height: 2.5px;
+  }
 }

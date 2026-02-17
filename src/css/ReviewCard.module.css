@@ -1,6 +1,7 @@
 .sliderContainer {
   padding: 80px 20px;
-  background-color: #05000a; /* Main section background */
+  background-color: #05000a;
+  /* Main section background */
 }
 
 .card {
@@ -54,7 +55,8 @@
   top: 25px;
   right: 25px;
   width: 60px;
-  opacity: 0.15; /* Subdued large quote marks */
+  opacity: 0.15;
+  /* Subdued large quote marks */
 }
 
 .feedback {
@@ -94,7 +96,8 @@
 }
 
 .footerIcons a:hover {
-  transform: translateY(-3px); /* Hover effect */
+  transform: translateY(-3px);
+  /* Hover effect */
 }
 
 .footerIcons svg {
@@ -104,4 +107,202 @@
 
 .footerIcons a:hover svg {
   opacity: 1;
+}
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+
+/* Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .card {
+    height: 300px;
+    padding: 32px;
+  }
+
+  .header {
+    margin-bottom: 22px;
+  }
+
+  .profileImg {
+    width: 62px;
+    height: 62px;
+  }
+
+  .info h3 {
+    font-size: 1.1rem;
+  }
+
+  .feedback {
+    font-size: 0.93rem;
+  }
+}
+
+/* Tablet Large (max-width: 992px) */
+@media (max-width: 992px) {
+  .sliderContainer {
+    padding: 70px 18px;
+  }
+
+  .card {
+    height: 310px;
+    padding: 30px;
+  }
+
+  .feedback {
+    font-size: 0.92rem;
+    line-height: 1.65;
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .sliderContainer {
+    padding: 60px 15px;
+  }
+
+  .card {
+    height: auto;
+    min-height: 280px;
+    padding: 28px;
+  }
+
+  .header {
+    margin-bottom: 20px;
+    gap: 12px;
+  }
+
+  .profileImg {
+    width: 58px;
+    height: 58px;
+  }
+
+  .info h3 {
+    font-size: 1.05rem;
+  }
+
+  .info p {
+    font-size: 0.8rem;
+  }
+
+  .quoteIcon {
+    width: 55px;
+    top: 22px;
+    right: 22px;
+  }
+
+  .feedback {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-top: 22px;
+  }
+
+  .footerIcons {
+    gap: 12px;
+    margin-top: 18px;
+    padding-top: 12px;
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .sliderContainer {
+    padding: 50px 12px;
+  }
+
+  .card {
+    min-height: 260px;
+    padding: 25px;
+  }
+
+  .header {
+    margin-bottom: 18px;
+    gap: 10px;
+  }
+
+  .profileImg {
+    width: 55px;
+    height: 55px;
+  }
+
+  .info h3 {
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+  }
+
+  .info p {
+    font-size: 0.78rem;
+  }
+
+  .quoteIcon {
+    width: 50px;
+    top: 20px;
+    right: 20px;
+    opacity: 0.12;
+  }
+
+  .feedback {
+    font-size: 0.88rem;
+    line-height: 1.55;
+    margin-top: 20px;
+  }
+
+  .footerIcons {
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 10px;
+  }
+
+  .footerIcons svg {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .sliderContainer {
+    padding: 45px 10px;
+  }
+
+  .card {
+    min-height: 240px;
+    padding: 22px;
+  }
+
+  .header {
+    margin-bottom: 16px;
+  }
+
+  .profileImg {
+    width: 50px;
+    height: 50px;
+  }
+
+  .info h3 {
+    font-size: 0.95rem;
+  }
+
+  .info p {
+    font-size: 0.75rem;
+  }
+
+  .quoteIcon {
+    width: 45px;
+    top: 18px;
+    right: 18px;
+  }
+
+  .feedback {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-top: 18px;
+  }
+
+  .footerIcons {
+    gap: 9px;
+  }
+
+  .footerIcons svg {
+    font-size: 0.9rem;
+  }
 }

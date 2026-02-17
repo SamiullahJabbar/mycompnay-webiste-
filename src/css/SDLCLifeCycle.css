@@ -1,6 +1,6 @@
 .sdlc-section {
   background-color: #05000a;
- 
+
   padding: 80px 20px 150px;
   color: white;
   font-family: 'Arial', sans-serif;
@@ -21,7 +21,7 @@
 .header-line {
   width: 450px;
   height: 2px;
-  background: linear-gradient(90deg,  #180429,#FFBF00);
+  background: linear-gradient(90deg, #180429, #FFBF00);
   margin: 15px auto 35px;
 }
 
@@ -44,11 +44,13 @@
   position: relative;
   width: 100%;
   max-width: 1300px;
-  height: 190px; /* Reference image jaisi height */
+  height: 190px;
+  /* Reference image jaisi height */
   background-color: #0d0017;
   clip-path: polygon(0% 0%, 96% 0%, 100% 50%, 96% 100%, 0% 100%, 4% 50%);
   display: flex;
-  align-items: center; /* Center alignment for items */
+  align-items: center;
+  /* Center alignment for items */
 }
 
 .steps-flex-container {
@@ -102,21 +104,290 @@
 /* --- ZigZag Logic from Reference --- */
 
 /* 1. Odd Items (1, 3, 5, 7): Icon in center, Text below bar */
-.step-node-item.odd .icon-circle-box {
-  /* Automatically centered by flex */
-}
-
 .step-node-item.odd .text-label-box {
-  top: 90px; /* Pushes text below the arrow bar */
+  top: 90px;
+  /* Pushes text below the arrow bar */
 }
 
 /* 2. Even Items (2, 4, 6): Icon on top edge, Text in center of bar */
 .step-node-item.even {
   /* Move icon up so it sits half on the edge */
-  transform: translateY(-55px); 
+  transform: translateY(-55px);
 }
 
 .step-node-item.even .text-label-box {
   /* Push text back down so it stays in the center of the bar */
-  top: 95px; 
+  top: 95px;
+}
+
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+
+/* Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .sdlc-header h1 {
+    font-size: 38px;
+  }
+
+  .header-line {
+    width: 400px;
+  }
+
+  .arrow-main-bar {
+    max-width: 1100px;
+  }
+}
+
+/* Tablet Large (max-width: 992px) */
+@media (max-width: 992px) {
+  .sdlc-section {
+    padding: 70px 18px 120px;
+  }
+
+  .sdlc-header h1 {
+    font-size: 36px;
+  }
+
+  .sdlc-header p {
+    font-size: 15px;
+    margin-bottom: 100px;
+  }
+
+  .arrow-main-bar {
+    max-width: 900px;
+    height: 170px;
+  }
+
+  .icon-circle-box {
+    width: 65px;
+    height: 65px;
+  }
+
+  .icon-circle-box img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .text-label-box {
+    width: 130px;
+  }
+
+  .text-label-box span {
+    font-size: 12px;
+  }
+
+  .step-node-item.odd .text-label-box {
+    top: 85px;
+  }
+
+  .step-node-item.even {
+    transform: translateY(-50px);
+  }
+
+  .step-node-item.even .text-label-box {
+    top: 90px;
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .sdlc-section {
+    padding: 60px 15px 100px;
+  }
+
+  .sdlc-header h1 {
+    font-size: 32px;
+    margin-bottom: 3px;
+  }
+
+  .header-line {
+    width: 300px;
+    margin: 12px auto 30px;
+  }
+
+  .sdlc-header p {
+    font-size: 14px;
+    margin-bottom: 80px;
+    max-width: 700px;
+  }
+
+  .arrow-main-bar {
+    max-width: 700px;
+    height: 150px;
+  }
+
+  .steps-flex-container {
+    padding: 0 25px;
+  }
+
+  .step-node-item {
+    width: 110px;
+  }
+
+  .icon-circle-box {
+    width: 60px;
+    height: 60px;
+  }
+
+  .icon-circle-box img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .text-label-box {
+    width: 120px;
+  }
+
+  .text-label-box span {
+    font-size: 11px;
+  }
+
+  .step-node-item.odd .text-label-box {
+    top: 75px;
+  }
+
+  .step-node-item.even {
+    transform: translateY(-45px);
+  }
+
+  .step-node-item.even .text-label-box {
+    top: 85px;
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .sdlc-section {
+    padding: 50px 12px 80px;
+  }
+
+  .sdlc-header h1 {
+    font-size: 28px;
+  }
+
+  .header-line {
+    width: 250px;
+    margin: 10px auto 25px;
+  }
+
+  .sdlc-header p {
+    font-size: 13px;
+    margin-bottom: 60px;
+    max-width: 100%;
+  }
+
+  /* Convert to vertical layout on mobile */
+  .timeline-container {
+    display: block;
+  }
+
+  .arrow-main-bar {
+    width: 90%;
+    max-width: 400px;
+    height: auto;
+    clip-path: none;
+    background: transparent;
+    margin: 0 auto;
+  }
+
+  .steps-flex-container {
+    flex-direction: column;
+    padding: 0;
+    gap: 30px;
+  }
+
+  .step-node-item {
+    width: 90%;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 15px;
+    padding: 15px;
+    background: #0d0017;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 191, 0, 0.2);
+  }
+
+  /* Reset odd/even positioning for mobile */
+  .step-node-item.odd,
+  .step-node-item.even {
+    transform: none;
+  }
+
+  .icon-circle-box {
+    width: 55px;
+    height: 55px;
+    flex-shrink: 0;
+  }
+
+  .icon-circle-box img {
+    width: 28px;
+    height: 28px;
+  }
+
+  .text-label-box {
+    position: static;
+    width: auto;
+    flex: 1;
+    text-align: left;
+    display: flex;
+    align-items: center;
+  }
+
+  .text-label-box span {
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .step-node-item.odd .text-label-box,
+  .step-node-item.even .text-label-box {
+    top: auto;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .sdlc-section {
+    padding: 45px 10px 70px;
+  }
+
+  .sdlc-header h1 {
+    font-size: 26px;
+  }
+
+  .header-line {
+    width: 220px;
+  }
+
+  .sdlc-header p {
+    font-size: 12px;
+    margin-bottom: 50px;
+  }
+
+  .arrow-main-bar {
+    width: 95%;
+  }
+
+  .steps-flex-container {
+    gap: 25px;
+  }
+
+  .step-node-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .icon-circle-box {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icon-circle-box img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .text-label-box span {
+    font-size: 12px;
+  }
 }

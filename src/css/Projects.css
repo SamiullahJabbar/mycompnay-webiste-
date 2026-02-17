@@ -1,12 +1,13 @@
 /* Section Background & Glows */
 .projects-section {
-  background: 
+  background:
     /* Right Side Center Glow (Top se 50% niche) */
     radial-gradient(circle at 100% 50%, #1a0b2e 0%, transparent 40%),
     /* Bottom Left Glow */
     radial-gradient(circle at 0% 0%, #120624 0%, transparent 40%);
-  
-  background-color: #05000a; /* Pure black base jo uper top right mein nazar ayega */
+
+  background-color: #05000a;
+  /* Pure black base jo uper top right mein nazar ayega */
   padding: 100px 5%;
   color: #fff;
   min-height: 100vh;
@@ -75,11 +76,11 @@
 
 .project-frame-card {
   /* Frame Background Color #380ba1 */
-  background-color: #231436; 
+  background-color: #231436;
   border-radius: 12px;
   overflow: hidden;
   /* Frame spacing: Top, Left, Right are thick */
-  padding: 12px 12px 0 12px; 
+  padding: 12px 12px 0 12px;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -111,12 +112,14 @@
 
 /* Details Section (The Black Area below Frame) */
 .project-details-area {
-  background-color: #180a2b; /* Black Background for text */
-  margin: 0 -12px; /* To cover the frame padding width */
+  background-color: #180a2b;
+  /* Black Background for text */
+  margin: 0 -12px;
+  /* To cover the frame padding width */
   padding: 20px 15px;
   flex-grow: 1;
   /* Line separating image frame from text area */
-  border-top: 1px solid #380ba1; 
+  border-top: 1px solid #380ba1;
 }
 
 /* Yellow Tags */
@@ -175,18 +178,252 @@
   color: #000;
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
-  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+
+/* Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .projects-section {
+    padding: 80px 4%;
+  }
+
+  .projects-header h2 {
+    font-size: 2.5rem;
+  }
+
+  .projects-header p {
+    font-size: 0.95rem;
+  }
 }
 
+/* Tablet Large (max-width: 992px) */
+@media (max-width: 992px) {
+  .projects-section {
+    padding: 70px 3%;
+  }
+
+  .projects-header h2 {
+    font-size: 2.3rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .project-frame-card {
+    padding: 10px 10px 0 10px;
+  }
+
+  .project-details-area {
+    padding: 18px 13px;
+  }
+
+  .filter-bar {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
+
+/* Tablet (max-width: 768px) */
 @media (max-width: 768px) {
-  .projects-grid { grid-template-columns: 1fr; }
-  .filter-bar { flex-direction: column; gap: 20px; }
+  .projects-section {
+    padding: 60px 20px;
+  }
+
+  .projects-header {
+    margin-bottom: 40px;
+  }
+
+  .projects-header h2 {
+    font-size: 2rem;
+  }
+
+  .projects-header p {
+    font-size: 0.9rem;
+    max-width: 600px;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .filter-btn.active {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  .explore-btn {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .project-frame-card {
+    padding: 10px 10px 0 10px;
+  }
+
+  .project-details-area {
+    padding: 16px 12px;
+  }
+
+  .tag-container {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .yellow-tag {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .project-text-content {
+    font-size: 14px;
+  }
+
+  .show-more-wrapper {
+    margin-top: 50px;
+  }
+
+  .show-more-btn {
+    padding: 10px 35px;
+    font-size: 0.9rem;
+  }
 }
 
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .projects-section {
+    padding: 50px 15px;
+  }
 
+  .projects-header {
+    margin-bottom: 35px;
+  }
 
+  .projects-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .projects-header p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .filter-bar {
+    gap: 15px;
+  }
+
+  .filter-btn.active {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+
+  .explore-btn {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+
+  .projects-grid {
+    gap: 15px;
+  }
+
+  .project-frame-card {
+    padding: 8px 8px 0 8px;
+  }
+
+  .project-details-area {
+    padding: 15px 10px;
+  }
+
+  .tag-container {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .yellow-tag {
+    font-size: 9px;
+    padding: 4px 8px;
+  }
+
+  .project-text-content {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .project-name {
+    font-size: 14px;
+  }
+
+  .show-more-wrapper {
+    margin-top: 40px;
+  }
+
+  .show-more-btn {
+    padding: 10px 30px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .projects-section {
+    padding: 40px 12px;
+  }
+
+  .projects-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .projects-header p {
+    font-size: 0.8rem;
+  }
+
+  .filter-btn.active {
+    padding: 8px 15px;
+    font-size: 0.8rem;
+  }
+
+  .explore-btn {
+    padding: 10px 15px;
+    font-size: 0.8rem;
+  }
+
+  .project-frame-card {
+    padding: 6px 6px 0 6px;
+  }
+
+  .project-details-area {
+    padding: 12px 8px;
+  }
+
+  .yellow-tag {
+    font-size: 8px;
+    padding: 3px 7px;
+  }
+
+  .project-text-content {
+    font-size: 12px;
+  }
+
+  .project-name {
+    font-size: 13px;
+  }
+
+  .show-more-btn {
+    padding: 9px 25px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Hover effects remain active on larger screens */
 .project-frame-card {
   transition: all 0.3s ease-in-out;
 }

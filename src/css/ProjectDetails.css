@@ -4,7 +4,7 @@
   min-height: 100vh;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-  
+
 }
 
 /* TOP SECTION: Pure Black */
@@ -15,7 +15,8 @@
 
 /* BOTTOM SECTION: Full Background Color #0a0012 */
 .project-content-split-wrapper {
-  background-color: #0a0012; /* Full background as requested */
+  background-color: #0a0012;
+  /* Full background as requested */
   padding: 80px 0;
   width: 100%;
 }
@@ -40,7 +41,9 @@
   margin-top: 10%;
 }
 
-.yellow-text { color: #FFBF00; }
+.yellow-text {
+  color: #FFBF00;
+}
 
 .main-desc-white {
   font-size: 1.1rem;
@@ -70,8 +73,14 @@
   color: #d1d1d6;
 }
 
-.yellow-icon { color: #FFBF00; }
-.meta-val { font-weight: 600; color: #fff; }
+.yellow-icon {
+  color: #FFBF00;
+}
+
+.meta-val {
+  font-weight: 600;
+  color: #fff;
+}
 
 .view-website-btn {
   background: #FFBF00;
@@ -94,7 +103,7 @@
 }
 
 /* ANIMATED BOXES */
-.content-left-block, 
+.content-left-block,
 .content-right-form-block {
   position: relative;
   background-color: #0a0212;
@@ -106,8 +115,14 @@
   flex-direction: column;
 }
 
-.content-left-block { flex: 1.4; }
-.content-right-form-block { flex: 1; justify-content: center; }
+.content-left-block {
+  flex: 1.4;
+}
+
+.content-right-form-block {
+  flex: 1;
+  justify-content: center;
+}
 
 /* Border Animation */
 .content-left-block::before,
@@ -134,8 +149,13 @@
 }
 
 @keyframes rotateBorder {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /* Image styling */
@@ -173,7 +193,10 @@
   font-weight: 700;
 }
 
-.inquiry-form { display: flex; flex-direction: column; }
+.inquiry-form {
+  display: flex;
+  flex-direction: column;
+}
 
 .form-group-row {
   display: flex;
@@ -181,10 +204,13 @@
   margin-bottom: 15px;
 }
 
-.form-group-row input { flex: 1; margin-bottom: 0 !important; }
+.form-group-row input {
+  flex: 1;
+  margin-bottom: 0 !important;
+}
 
-.inquiry-form input, 
-.inquiry-form select, 
+.inquiry-form input,
+.inquiry-form select,
 .inquiry-form textarea {
   width: 100%;
   box-sizing: border-box;
@@ -198,7 +224,10 @@
   outline: none;
 }
 
-.inquiry-form textarea { min-height: 100px; resize: none; }
+.inquiry-form textarea {
+  min-height: 100px;
+  resize: none;
+}
 
 .consultation-btn {
   width: 100%;
@@ -213,29 +242,268 @@
   text-transform: uppercase;
 }
 
-/* Responsive */
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+
+/* Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .combined-title {
+    font-size: 3.2rem;
+  }
+
+  .main-desc-white {
+    font-size: 1.05rem;
+  }
+
+  .detail-inner-container {
+    max-width: 1100px;
+  }
+}
+
+/* Tablet Large (max-width: 1024px) */
 @media (max-width: 1024px) {
-  .project-content-split { flex-direction: column; }
+  .combined-title {
+    font-size: 3rem;
+  }
+
+  .project-content-split {
+    flex-direction: column;
+  }
+
+  .content-left-block,
+  .content-right-form-block {
+    flex: 1;
+  }
 }
 
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .detail-main-header {
+    padding-top: 50px;
+  }
 
+  .combined-title {
+    font-size: 2.5rem;
+    margin-top: 8%;
+  }
 
-/* --- Notification Styling --- */
-.form-notification-purple {
-  background-color: #6a0dad; /* Purple color */
-  color: white;
-  padding: 12px;
-  border-radius: 10px;
-  text-align: center;
-  margin-bottom: 20px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  animation: fadeIn 0.5s ease-in-out;
+  .main-desc-white {
+    font-size: 1rem;
+    margin-bottom: 35px;
+  }
+
+  .meta-box-container {
+    padding: 15px 28px;
+    gap: 20px;
+  }
+
+  .meta-item {
+    font-size: 0.8rem;
+  }
+
+  .view-website-btn {
+    padding: 11px 26px;
+    font-size: 0.85rem;
+  }
+
+  .project-content-split-wrapper {
+    padding: 70px 0;
+  }
+
+  .content-left-block,
+  .content-right-form-block {
+    padding: 25px;
+  }
+
+  .image-outer-frame {
+    padding: 18px;
+  }
+
+  .image-bottom-description {
+    margin-top: 22px;
+    font-size: 0.95rem;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+  }
+
+  .inquiry-form input,
+  .inquiry-form select,
+  .inquiry-form textarea {
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+
+  .consultation-btn {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .detail-main-header {
+    padding-top: 40px;
+  }
+
+  .combined-title {
+    font-size: 2.2rem;
+    margin-top: 12%;
+    margin-bottom: 12px;
+  }
+
+  .main-desc-white {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .meta-box-container {
+    flex-direction: column;
+    padding: 12px 20px;
+    gap: 12px;
+    align-items: flex-start;
+  }
+
+  .meta-item {
+    font-size: 0.75rem;
+    gap: 6px;
+  }
+
+  .view-website-btn {
+    padding: 10px 24px;
+    font-size: 0.8rem;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .project-content-split-wrapper {
+    padding: 60px 0;
+  }
+
+  .detail-inner-container {
+    padding: 0 15px;
+  }
+
+  .project-content-split {
+    gap: 25px;
+  }
+
+  .content-left-block,
+  .content-right-form-block {
+    padding: 22px;
+  }
+
+  .image-outer-frame {
+    padding: 15px;
+  }
+
+  .image-bottom-description {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .form-title {
+    font-size: 1.3rem;
+    margin-bottom: 22px;
+  }
+
+  .form-group-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-group-row input {
+    margin-bottom: 15px !important;
+  }
+
+  .inquiry-form input,
+  .inquiry-form select,
+  .inquiry-form textarea {
+    padding: 12px 15px;
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .inquiry-form textarea {
+    min-height: 90px;
+  }
+
+  .consultation-btn {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+
+  .form-notification-purple {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .detail-main-header {
+    padding-top: 35px;
+  }
+
+  .combined-title {
+    font-size: 2rem;
+    margin-top: 15%;
+  }
+
+  .main-desc-white {
+    font-size: 0.9rem;
+  }
+
+  .meta-box-container {
+    padding: 10px 18px;
+    gap: 10px;
+  }
+
+  .meta-item {
+    font-size: 0.7rem;
+  }
+
+  .view-website-btn {
+    padding: 9px 22px;
+    font-size: 0.75rem;
+  }
+
+  .detail-inner-container {
+    padding: 0 12px;
+  }
+
+  .content-left-block,
+  .content-right-form-block {
+    padding: 20px;
+  }
+
+  .image-outer-frame {
+    padding: 12px;
+  }
+
+  .image-bottom-description {
+    font-size: 0.85rem;
+  }
+
+  .form-title {
+    font-size: 1.2rem;
+  }
+
+  .inquiry-form input,
+  .inquiry-form select,
+  .inquiry-form textarea {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+
+  .consultation-btn {
+    padding: 13px;
+    font-size: 0.85rem;
+  }
 }
 
 /* Baki purana CSS yahan se continue hoga (Jo aapne provide kiya hai) */

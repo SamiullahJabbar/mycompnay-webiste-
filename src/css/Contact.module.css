@@ -26,8 +26,10 @@
 .contactMainCard::before {
   content: "";
   position: absolute;
-  top: -50%; left: -50%;
-  width: 200%; height: 200%;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
   background: conic-gradient(transparent, #320358, transparent 50%);
   animation: rotateBorder 4s linear infinite;
   z-index: -2;
@@ -43,8 +45,13 @@
 }
 
 @keyframes rotateBorder {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .contentSplit {
@@ -62,21 +69,41 @@
   border-radius: 23px 0 0 23px;
 }
 
-.contactInfo h1 { font-size: 3rem; color: #fff; }
-.contactInfo h1 span { color: #ffcc00; }
-.contactInfo p { color: #ffffff; opacity: 0.9; margin-bottom: 20px; }
-.infoBox h4 { color: #ffcc00; margin-bottom: 5px; margin-top: 15px; }
-.infoBox p { color: #ffffff !important; font-size: 1.1rem; }
+.contactInfo h1 {
+  font-size: 3rem;
+  color: #fff;
+}
+
+.contactInfo h1 span {
+  color: #ffcc00;
+}
+
+.contactInfo p {
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 20px;
+}
+
+.infoBox h4 {
+  color: #ffcc00;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.infoBox p {
+  color: #ffffff !important;
+  font-size: 1.1rem;
+}
 
 /* --- RIGHT SIDE FIX --- */
-.discussionCard { 
-  padding: 60px; 
-  display: flex; 
-  flex-direction: column; 
+.discussionCard {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   transition: all 0.3s ease;
   /* Margin 2px islye taake line cover na ho */
-  margin: 2px; 
+  margin: 2px;
   border-radius: 0 23px 23px 0;
   background: transparent;
 }
@@ -94,15 +121,18 @@
   color: #fff;
 }
 
-.inquiryForm { display: flex; flex-direction: column; }
+.inquiryForm {
+  display: flex;
+  flex-direction: column;
+}
 
 .formGroupRow {
   display: flex;
   gap: 15px;
 }
 
-.inquiryForm input, 
-.inquiryForm select, 
+.inquiryForm input,
+.inquiryForm select,
 .inquiryForm textarea {
   width: 100%;
   box-sizing: border-box;
@@ -116,7 +146,10 @@
   outline: none;
 }
 
-.inquiryForm textarea { min-height: 120px; resize: none; }
+.inquiryForm textarea {
+  min-height: 120px;
+  resize: none;
+}
 
 .consultationBtn {
   width: 100%;
@@ -146,8 +179,221 @@
   margin-bottom: 20px;
 }
 
+/* ========================================
+   RESPONSIVE MEDIA QUERIES
+   ======================================== */
+
+/* Desktop Small (max-width: 1200px) */
+@media (max-width: 1200px) {
+  .contactInfo h1 {
+    font-size: 2.7rem;
+  }
+
+  .formTitle {
+    font-size: 1.5rem;
+  }
+}
+
+/* Tablet Large (max-width: 992px) */
+@media (max-width: 992px) {
+  .contactWrapper {
+    padding: 80px 18px;
+  }
+
+  .contactMainCard {
+    min-height: 650px;
+  }
+
+  .contactInfo {
+    padding: 50px;
+  }
+
+  .discussionCard {
+    padding: 50px;
+  }
+}
+
+/* Tablet (max-width: 900px) */
 @media (max-width: 900px) {
-  .contentSplit { grid-template-columns: 1fr; }
-  .contactInfo { border-radius: 23px 23px 0 0; }
-  .discussionCard { border-radius: 0 0 23px 23px; padding: 30px; }
+  .contentSplit {
+    grid-template-columns: 1fr;
+  }
+
+  .contactInfo {
+    border-radius: 23px 23px 0 0;
+    padding: 40px;
+  }
+
+  .contactInfo h1 {
+    font-size: 2.5rem;
+  }
+
+  .discussionCard {
+    border-radius: 0 0 23px 23px;
+    padding: 40px;
+  }
+
+  .formTitle {
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+  }
+}
+
+/* Tablet (max-width: 768px) */
+@media (max-width: 768px) {
+  .contactWrapper {
+    padding: 70px 15px;
+  }
+
+  .contactMainCard {
+    min-height: auto;
+  }
+
+  .contactInfo h1 {
+    font-size: 2.2rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.95rem;
+  }
+
+  .infoBox h4 {
+    font-size: 0.95rem;
+  }
+
+  .infoBox p {
+    font-size: 1rem;
+  }
+
+  .formTitle {
+    font-size: 1.3rem;
+  }
+
+  .inquiryForm input,
+  .inquiryForm select,
+  .inquiryForm textarea {
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+
+  .consultationBtn {
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile (max-width: 576px) */
+@media (max-width: 576px) {
+  .contactWrapper {
+    padding: 60px 12px;
+  }
+
+  .contactInfo {
+    padding: 35px;
+  }
+
+  .contactInfo h1 {
+    font-size: 2rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+
+  .infoBox h4 {
+    font-size: 0.9rem;
+    margin-top: 12px;
+  }
+
+  .infoBox p {
+    font-size: 0.95rem;
+  }
+
+  .discussionCard {
+    padding: 35px;
+  }
+
+  .formTitle {
+    font-size: 1.2rem;
+    margin-bottom: 22px;
+  }
+
+  .formGroupRow {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .formGroupRow input {
+    margin-bottom: 15px !important;
+  }
+
+  .inquiryForm input,
+  .inquiryForm select,
+  .inquiryForm textarea {
+    padding: 12px 15px;
+    font-size: 13px;
+    margin-bottom: 13px;
+  }
+
+  .inquiryForm textarea {
+    min-height: 110px;
+  }
+
+  .consultationBtn {
+    padding: 14px;
+    font-size: 0.9rem;
+  }
+
+  .formNotificationPurple {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile Small (max-width: 400px) */
+@media (max-width: 400px) {
+  .contactWrapper {
+    padding: 50px 10px;
+  }
+
+  .contactInfo {
+    padding: 30px;
+  }
+
+  .contactInfo h1 {
+    font-size: 1.8rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.85rem;
+  }
+
+  .infoBox h4 {
+    font-size: 0.85rem;
+  }
+
+  .infoBox p {
+    font-size: 0.9rem;
+  }
+
+  .discussionCard {
+    padding: 30px;
+  }
+
+  .formTitle {
+    font-size: 1.1rem;
+  }
+
+  .inquiryForm input,
+  .inquiryForm select,
+  .inquiryForm textarea {
+    padding: 11px 14px;
+    font-size: 12px;
+  }
+
+  .consultationBtn {
+    padding: 13px;
+    font-size: 0.85rem;
+  }
 }

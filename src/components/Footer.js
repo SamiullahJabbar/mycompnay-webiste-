@@ -18,7 +18,7 @@ const Footer = () => {
           <h3 className="gbg-footer-title">Menu</h3>
           <ul className="gbg-footer-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#about">About</a></li>
+            <li><a href="#industries">About</a></li>
             <li><a href="#home">Technologies</a></li>
             <li><a href="#portfolio">Projects</a></li>
           </ul>
