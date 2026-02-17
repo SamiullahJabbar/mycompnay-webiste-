@@ -1,85 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/Navbar.css";
-import headericon from "../images/header/gbglogo.png"; // Import the logo image
+import headericon from "../images/new-logo/logo.png";
 
 const Navbar = () => {
-  
+  const [isOpen, setIsOpen] = useState(false); // Mobile menu toggle state
+
   const navLinks = [
     { name: "Home", id: "home" },
     { name: "About", id: "about" },
     { name: "Services", id: "services" },
     { name: "Portfolio", id: "portfolio" },
-    { name: "Pricing", id: "pricing" },
-    { name: "Social", id: "social" },
+    // { name: "Pricing", id: "pricing" },
+    // { name: "Social", id: "social" },
     { name: "Contact", id: "contact" },
   ];
 
-  // Simple aur effective scrolling function
   const handleMenuClick = (sectionId) => {
-    console.log(`🟢 Clicked on: ${sectionId}`);
-    
+    setIsOpen(false); // Link click hote hi menu band ho jaye
     const element = document.getElementById(sectionId);
-    
     if (element) {
-      // Smooth scroll
-      element.scrollIntoView({ 
-        behavior: 'smooth', 
-        block: 'start'
-      });
-      
-      // URL update
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       window.history.pushState(null, null, `#${sectionId}`);
-    } else {
-      console.warn(`Element '${sectionId}' not found, scrolling to top`);
-      
-      // Agar element nahi mila toh top pe scroll karo
-      if (sectionId === 'home') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-        window.history.pushState(null, null, '#home');
-      }
     }
   };
 
   return (
     <nav className="navbar-container">
-      {/* Logo with Image */}
+      {/* Logo */}
+      <div className="navbar-logo" onClick={() => handleMenuClick("home")}>
+        <img src={headericon} alt="GBG Logo" className="navbar-logo-img" />
+      </div>
+
+      {/* Hamburger Icon (Sirf Mobile pe dikhega) */}
       <div 
-        className="navbar-logo" 
-        onClick={() => handleMenuClick("home")}
-        style={{ cursor: "pointer" }}
+        className={`hamburger ${isOpen ? "active" : ""}`} 
+        onClick={() => setIsOpen(!isOpen)}
       >
-        <img 
-          src={headericon} 
-          alt="GBG Logo" 
-          className="navbar-logo-img"
-        />
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
       </div>
 
       {/* Navigation Links */}
-      <ul className="navbar-links">
+      <ul className={`navbar-links ${isOpen ? "show" : ""}`}>
         {navLinks.map((link, index) => (
           <React.Fragment key={link.id}>
-            <li 
-              className="nav-item"
-              onClick={() => handleMenuClick(link.id)}
-            >
-              <span className="nav-link">
-                {link.name}
-              </span>
+            <li className="nav-item" onClick={() => handleMenuClick(link.id)}>
+              <span className="nav-link">{link.name}</span>
             </li>
-            
-            {/* Divider */}
+            {/* Desktop divider */}
             {index < navLinks.length - 1 && <li className="divider">|</li>}
           </React.Fragment>
         ))}
+        
+        {/* Mobile-only Button (Menu ke andar) */}
+        <li className="mobile-only">
+          <button className="btn-talk" onClick={() => handleMenuClick("contact")}>
+            Let's Talk
+          </button>
+        </li>
       </ul>
 
-      {/* Let's Talk Button */}
-      <div className="navbar-action">
-        <button 
-          className="btn-talk" 
-          onClick={() => handleMenuClick("contact")}
-        >
+      {/* Desktop-only Button */}
+      <div className="navbar-action desktop-only">
+        <button className="btn-talk" onClick={() => handleMenuClick("contact")}>
           Let's Talk
         </button>
       </div>

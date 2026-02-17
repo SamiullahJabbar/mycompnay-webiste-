@@ -1,4 +1,4 @@
-/* Main Container */
+/* --- Desktop Styles (As you provided) --- */
 .navbar-container {
   position: fixed;
   top: 20px;
@@ -9,173 +9,87 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 50px;
+  padding: 10px 40px;
   z-index: 1000;
 }
 
-/* Logo Image Styling */
-.navbar-logo {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  user-select: none;
-  height: 70px; /* Adjust according to your image */
-}
+.navbar-logo { height: 60px; cursor: pointer; }
+.navbar-logo-img { height: 200%; width: auto; object-fit: contain; }
 
-.navbar-logo-img {
-  height: 250%; /* Full height of logo container */
-  width: auto; /* Maintain aspect ratio */
-  object-fit: contain;
-  transition: transform 0.3s ease;
-  margin-left: -1vh;
-}
-
-.navbar-logo:hover .navbar-logo-img {
-  transform: scale(1.05);
-}
-
-/* Purple Glow Effect for Logo */
-.navbar-logo::after, .navbar-action::after {
-  content: "";
-  position: absolute;
-  bottom: -30px; 
-  left: 50%;
-  transform: translateX(-50%);
-  width: 120px;
-  height: 50px;
-  background: rgba(147, 51, 234, 0.6); 
-  filter: blur(30px);
-  border-radius: 50%;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.navbar-action {
-  position: relative;
-}
-
-/* Center Navigation */
 .navbar-links {
   display: flex;
   align-items: center;
-  gap: 5px; 
-  background: rgba(10, 10, 10, 0.85);
+  gap: 5px;
+  background: rgba(10, 10, 10, 0.9);
   backdrop-filter: blur(15px);
   padding: 8px 25px;
   border-radius: 50px;
-  position: relative;
   list-style: none;
-  margin: 0;
   border: 1px solid rgba(255, 204, 0, 0.3);
-  box-shadow: 0 0 15px rgba(255, 204, 0, 0.1);
 }
 
-/* Yellow border animation - FIXED */
-.navbar-links::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: 50px;
-  padding: 2px;
-  background: linear-gradient(90deg, transparent, #FFBF00, transparent);
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  animation: shine-border 4s linear infinite;
-  pointer-events: none;
-  z-index: 1;
-}
+.nav-link { color: #fff; padding: 10px 15px; cursor: pointer; display: block; }
+.divider { color: rgba(255, 255, 255, 0.2); }
+.btn-talk { background-color: #FFBF00; padding: 12px 25px; border-radius: 50px; font-weight: 800; cursor: pointer; border: none; }
 
-/* Menu Items - FIXED CLICKABLE */
-.nav-item {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s ease;
-  border-radius: 30px;
+.mobile-only { display: none; }
+.desktop-only { display: block; }
+
+/* --- Hamburger Menu Icon --- */
+.hamburger {
+  display: none;
+  flex-direction: column;
   cursor: pointer;
-  position: relative;
-  z-index: 2;
+  gap: 5px;
+  z-index: 1001;
 }
 
-/* Link styling - SPAN use kiya instead of A */
-.nav-link {
-  color: #fff;
-  text-decoration: none;
-  font-size: 1.05rem;
-  font-weight: 500;
-  padding: 10px 18px;
-  display: block;
-  width: 100%;
-  height: 100%;
-  transition: 0.3s;
-  border-radius: 30px;
-}
-
-/* Hover Effect */
-.nav-item:hover {
-  background-color: rgba(147, 51, 234, 0.7); 
-  box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
-  transform: scale(1.05);
-}
-
-.nav-item:hover .nav-link {
-  color: white !important;
-  font-weight: 600;
-}
-
-/* Divider */
-.divider {
-  color: rgba(255, 255, 255, 0.2);
-  font-size: 1rem;
-  pointer-events: none;
-  padding: 0 5px;
-  z-index: 1;
-}
-
-/* Let's Talk Button */
-.btn-talk {
+.bar {
+  width: 25px;
+  height: 3px;
   background-color: #FFBF00;
-  color: #000;
-  border: none;
-  padding: 14px 35px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-size: 1.1rem;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(255, 204, 0, 0.3);
-  transition: all 0.3s ease;
-  position: relative;
-  z-index: 2;
+  transition: 0.4s;
 }
 
-.btn-talk:hover {
-  transform: translateY(-3px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(255, 204, 0, 0.5);
-}
-
-/* Animation */
-@keyframes shine-border {
-  0% { 
-    background-position: -200% center;
-  }
-  100% { 
-    background-position: 200% center;
-  }
-}
-
-/* Responsive */
+/* --- RESPONSIVE FIX --- */
 @media (max-width: 1024px) {
-  .navbar-links {
-    display: none; 
-  }
+  .hamburger { display: flex; }
   
-  /* Responsive logo */
-  .navbar-logo {
-    height: 40px;
+  .desktop-only { display: none; }
+  .mobile-only { display: block; margin-top: 20px; }
+  .divider { display: none; } /* Mobile pe danda hide */
+
+  .navbar-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Shuru mein screen se bahar */
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.95);
+    width: 75%;
+    height: 100vh;
+    padding: 0;
+    transition: 0.4s ease-in-out;
+    border-radius: 0;
+    border: none;
   }
+
+  .navbar-links.show {
+    right: 0; /* Click pe andar aa jaye */
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nav-link {
+    font-size: 20px;
+    padding: 15px;
+  }
+
+  /* Hamburger Animation (X banna) */
+  .hamburger.active .bar:nth-child(1) { transform: rotate(-45deg) translate(-5px, 6px); }
+  .hamburger.active .bar:nth-child(2) { opacity: 0; }
+  .hamburger.active .bar:nth-child(3) { transform: rotate(45deg) translate(-5px, -6px); }
 }

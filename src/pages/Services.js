@@ -170,7 +170,7 @@ const Services = () => {
     <div className="services-page">
       <div className="services-main-container">
         <div className="services-header">
-          <h2>How GlobalBizguide  <span>Empowers Your Business</span></h2>
+          <h2>How GlobalBiz Agentic  <span>Empowers Your Business</span></h2>
           <p>From custom WordPress development to performance optimization and educational content, I provide comprehensive solutions.</p>
         </div>
         <div className="services-grid">

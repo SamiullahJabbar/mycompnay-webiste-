@@ -9,7 +9,7 @@ import ReviewSlider from "./ReviewSlider";
 import Contact from "./Contact";
 
 // Images
-import personImg from "../images/header/hericon.png";
+import personImg from "../images/new-logo/GBA.png";
 import iconJs from "../images/icon03.svg";
 import iconHtml from "../images/icon03.svg";
 import iconReact from "../images/icon04.svg";
@@ -158,8 +158,8 @@ const Home = () => {
           </div>
 
           <div className={`text-section ${showText ? 'show' : ''}`}>
-            <h1>Let's Build With <span>Global Biz Guide</span></h1>
-            <p>Expertise. Innovation. Excellence.</p>
+            <h1>Let's Build With <span>GLOBAL BIZ AGENTIC</span></h1>
+            <p>Automation. Innovation. Excellence.</p>
           </div>
         </div>
       </section>
@@ -170,10 +170,10 @@ const Home = () => {
           <div className="cursor-gradient" style={{ opacity: mousePos.opacity, background: `radial-gradient(600px at ${mousePos.x}% ${mousePos.y}%, rgba(139, 92, 246, 0.35), transparent 70%)` }}></div>
           <div className="about-grid">
             <div className="about-info">
-              <h2>Welcome to <span>GlobalBizguide</span></h2>
+              <h2>Welcome to <span>GlobalBiz Agentic</span></h2>
               <p>
-                With over 6 years of industry experience, GlobalBizguide has been guiding businesses through their digital transformation journeys. We proudly welcome clients from diverse industries, helping them embrace innovation and scale with confidence.
-                Whether you need seamless integration of new software into your infrastructure or the redesign and upgrade of outdated solutions, our team stands ready to assist. No project is too complex or challenging - we bring expertise, adaptability, and dedication to every endeavor. At GlobalBizguide, our mission is clear: to exceed client expectations by delivering premium branding, web, and app solutions that inspire trust and drive success.
+                With over 6 years of industry experience, GlobalBiz Agentic has been guiding businesses through their digital transformation journeys. We proudly welcome clients from diverse industries, helping them embrace innovation and scale with confidence.
+                Whether you need seamless integration of new software into your infrastructure or the redesign and upgrade of outdated solutions, our team stands ready to assist. No project is too complex or challenging - we bring expertise, adaptability, and dedication to every endeavor. At GlobalBiz Agentic our mission is clear: to exceed client expectations by delivering premium branding, web, and app solutions that inspire trust and drive success.
               </p>
               <button className="know-more-btn" onClick={handleKnowMoreClick}>
                 Know more about me <span className="arrow">↗</span>

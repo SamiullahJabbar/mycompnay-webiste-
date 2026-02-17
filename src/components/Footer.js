@@ -18,17 +18,17 @@ const Footer = () => {
           <h3 className="gbg-footer-title">Menu</h3>
           <ul className="gbg-footer-links">
             <li><a href="#services">Services</a></li>
-            <li><a href="#industries">Industries</a></li>
-            <li><a href="#technologies">Technologies</a></li>
             <li><a href="#about">About</a></li>
+            <li><a href="#home">Technologies</a></li>
+            <li><a href="#portfolio">Projects</a></li>
           </ul>
         </div>
 
         {/* Center Section: GBG & CTA */}
         <div className="gbg-footer-section gbg-footer-center-section">
           <div className="gbg-footer-brand-box">
-            <h1 className="gbg-footer-brand-logo">Global Biz Guide</h1>
-            <p className="gbg-footer-brand-tagline">Expertise. Innovation. Excellence.</p>
+            <h1 className="gbg-footer-brand-logo">GlobalBiz Agentic</h1>
+            <p className="gbg-footer-brand-tagline">Automation. Innovation. Excellence.</p>
           </div>
           
           <h2 className="gbg-footer-cta-heading">How can we help you?</h2>
@@ -47,14 +47,14 @@ const Footer = () => {
             <a href="#"><FaInstagram /></a>
           </div>
           <div className="gbg-footer-contact-info">
-            <p className="gbg-footer-email">info@globalbizguide.com</p>
+            <p className="gbg-footer-email">info@globalbizagentic.com</p>
             <p className="gbg-footer-phone">+44 7799287206</p>
           </div>
         </div>
       </div>
 
       <div className="gbg-footer-bottom">
-        <p>Copyright © 2026 <span className="gbg-footer-highlight">Global Biz Guide</span>. All Rights Reserved</p>
+        <p>Copyright © 2026 <span className="gbg-footer-highlight">GlobalBiz Agentic</span>. All Rights Reserved</p>
       </div>
     </footer>
   );
