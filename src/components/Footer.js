@@ -47,8 +47,8 @@ const Footer = () => {
             <a href="#"><FaInstagram /></a>
           </div>
           <div className="gbg-footer-contact-info">
-            <p className="gbg-footer-email">info@globalbizagentic.com</p>
-            <p className="gbg-footer-phone">+44 7799287206</p>
+            <p className="gbg-footer-email">info@globalbizagentic.com<br/>shine.kainat@gmail.com</p>
+            <p className="gbg-footer-phone">+447863662568</p>
           </div>
         </div>
       </div>

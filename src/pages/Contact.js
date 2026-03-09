@@ -40,9 +40,13 @@ const Contact = () => {
               <div className={styles.infoItems}>
                 <div className={styles.infoBox}>
                   <h4>Email Us</h4>
-                  <p>info@globalbizagentic.com</p>
+                  <p>info@globalbizagentic.com <br/>shine.kainat@gmail.com </p>y
+                  {/* <p>shine.kainat@gmail.com</p> */}
                    <h4>Phone</h4>
-                  <p>+444243243254</p>
+                  <p>+447863662568</p>
+                   <h4>Directore</h4>
+                   <p>kainant baqir</p>
+                   
                 </div>
               </div>
             </div>
